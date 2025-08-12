@@ -1,6 +1,6 @@
 module github.com/piperchapman/full-stack
 
-go 1.24.6
+go 1.24.4
 
 require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
