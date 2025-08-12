@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container" id="authContainer">
+            <!-- Login Form -->
+            <div class="form-container" id="loginForm">
+                <h2>Login</h2>
+                <form id="loginFormElement">
+                    <div class="input-group">
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+                </div>
+                <div id="loginMessage" class="message"></div>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form-container hidden" id="signupForm">
+                <h2>Sign Up</h2>
+                <form id="signupFormElement">
+                    <div class="input-group">
+                        <input type="text" id="signupUsername" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="signupEmail" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="signupPassword" placeholder="Password (min 6 characters)" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+                </div>
+                <div id="signupMessage" class="message"></div>
+            </div>
+        </div>
+
+        <!-- Profile Section (shown after login) -->
+        <div class="profile-container hidden" id="profileContainer">
+            <div class="profile-header">
+                <h2>Welcome!</h2>
+                <button class="btn btn-secondary" id="logoutBtn">Logout</button>
+            </div>
+            <div class="profile-info" id="profileInfo">
+                <!-- Profile information will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading hidden" id="loading">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
