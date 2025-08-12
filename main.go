@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"strings"
 	"time"
+	"os"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gorilla/mux"
@@ -233,6 +234,10 @@ func ProfileHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	// MongoDB connection
 	secret := os.Getenv("JWT_SECRET")
+	if secret == "" {
+        log.Fatal("JWT_SECRET environment variable not set")
+    }
+jwtSecret = []byte(secret)
 
 	serverAPI := options.ServerAPI(options.ServerAPIVersion1)
 	opts := options.Client().ApplyURI("mongodb+srv://f004fashion:WnO4ZAeL0REK2bL4@cluster0.xqumfcv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").SetServerAPIOptions(serverAPI)
