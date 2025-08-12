@@ -286,7 +286,7 @@ jwtSecret = []byte(secret)
 	r.HandleFunc("/api/profile", ProfileHandler).Methods("GET")
 	
 	// Serve static files
-	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
+	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./")))
 
 	log.Println("Server running on http://localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", r))
