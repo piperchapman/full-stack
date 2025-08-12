@@ -1,6 +1,7 @@
 // script.js
 
-const API_BASE = "http://localhost:8080/api";
+const API_BASE = "https://full-stack-production-b33c.up.railway.app/api";
+
 
 // UI Elements
 const loginForm = document.getElementById("loginForm");
