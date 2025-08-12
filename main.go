@@ -240,7 +240,7 @@ func main() {
 jwtSecret = []byte(secret)
 
 	serverAPI := options.ServerAPI(options.ServerAPIVersion1)
-	opts := options.Client().ApplyURI("mongodb+srv://f004fashion:WnO4ZAeL0REK2bL4@cluster0.xqumfcv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").SetServerAPIOptions(serverAPI)
+	opts := options.Client().ApplyURI("mongodb+srv://f004fashion:WnO4ZAeL0REK2bL4@cluster0.xqumfcv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tls=true").SetServerAPIOptions(serverAPI)
 	
 	var err error
 	client, err = mongo.Connect(opts)
